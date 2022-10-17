@@ -3,7 +3,7 @@ import type { AWS } from "@serverless/typescript";
 import { functions } from "./serverless/functions";
 
 const serverlessConfiguration: AWS = {
-  service: "aws-lambda-with-planetscale-and-prisma",
+  service: "aws-lambda-with-planetscale",
   frameworkVersion: "3",
   plugins: ["serverless-esbuild", "serverless-offline"],
   useDotenv: true,

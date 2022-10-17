@@ -1,5 +1,5 @@
 {
-  "name": "aws-lambda-with-planetscale-and-prisma",
+  "name": "aws-lambda-with-planetscale",
   "version": "1.0.0",
   "description": "Serverless aws-nodejs-typescript template",
   "main": "serverless.ts",
