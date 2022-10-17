@@ -5,7 +5,7 @@ import { functions } from "./serverless/functions";
 const serverlessConfiguration: AWS = {
   service: "aws-lambda-with-planetscale-and-prisma",
   frameworkVersion: "3",
-  plugins: ["serverless-esbuild"],
+  plugins: ["serverless-esbuild", "serverless-offline"],
   useDotenv: true,
   provider: {
     name: "aws",
