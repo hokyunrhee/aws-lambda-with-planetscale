@@ -1,5 +1,7 @@
 import type { AWS } from "@serverless/typescript";
 
+import { functions } from "./serverless/functions";
+
 const serverlessConfiguration: AWS = {
   service: "aws-lambda-with-planetscale-and-prisma",
   frameworkVersion: "3",
@@ -9,6 +11,7 @@ const serverlessConfiguration: AWS = {
     name: "aws",
     runtime: "nodejs14.x",
     region: "ap-northeast-2",
+    profile: "serverlessUser",
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
@@ -19,7 +22,7 @@ const serverlessConfiguration: AWS = {
       DATABASE_URL: "${env:DATABASE_URL}",
     },
   },
-  functions: {},
+  functions,
   package: {
     individually: true,
     patterns: [
